@@ -45,6 +45,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav li {
@@ -220,4 +221,74 @@ footer {
     .tips-list {
         grid-template-columns: 1fr;
     }
+}
+
+#dashboard {
+    background-color: #e6f7ff;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+}
+
+#missions ul {
+    list-style: none;
+    padding: 0;
+}
+
+#missions li {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+#missions li.completed {
+    background-color: #d4edda;
+}
+
+#missions li.completed::before {
+    content: '✓';
+    color: green;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+#quiz {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#quiz-container {
+    margin-top: 1rem;
+}
+
+#options {
+    margin: 1rem 0;
+}
+
+#options button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#options button:hover {
+    background-color: #e0e0e0;
+}
+
+#options button.selected {
+    background-color: #008080;
+    color: white;
+}
+
+#quiz-result {
+    text-align: center;
 }

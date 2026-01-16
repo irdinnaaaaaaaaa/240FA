@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn badminton the fun way with Dynamite Sports Learner – your beginner-friendly AI badminton coach.">
+    <meta name="theme-color" content="#00D084">
+    <title>Dynamite Sports Learner – Badminton Coach</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Skip to Main Content (Accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Debug Info Panel -->
+    <div id="debug-panel" class="debug-info">
+        <div><strong>Debug Info (Press D to toggle):</strong></div>
+        <div id="debug-content"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">�</span>
+                <span class="logo-text">Dynamite Badminton</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#chat" class="nav-link">Chat with Coach</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero" role="banner">
+        <div class="hero-content">
+            <h1 class="hero-title">Learn Badminton the Fun Way! 🏸</h1>
+            <p class="hero-subtitle">
+                Meet your personal AI badminton coach. We'll guide you step by step—from your first serve to your first smash!
+            </p>
+            <button class="cta-button" id="chat-toggle-button" aria-label="Open chat with badminton coach">
+                💬 Chat with Your Coach
+            </button>
+        </div>
+        <div class="hero-image">
+            <div class="badminton-animation">
+                <span class="shuttlecock">🏸</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Why Dynamite Badminton Rocks? 🚀</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="card-icon">👨‍🏫</div>
+                        <h3>Expert Guidance</h3>
+                        <p>Your AI coach breaks down badminton techniques into simple, easy-to-follow steps.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">🎮</div>
+                        <h3>Interactive Learning</h3>
+                        <p>Learn through engaging explanations and real-world bowling tips tailored for beginners.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">🏆</div>
+                        <h3>Build Confidence</h3>
+                        <p>Progress at your own pace and celebrate your achievements with encouraging feedback.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">📱</div>
+                        <h3>Always Available</h3>
+                        <p>Access your coach anytime, anywhere. Questions? We've got answers!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Maps Section -->
+        <section id="maps" class="maps-section">
+            <div class="container">
+                <h2>Find Nearby Badminton Courts 🗺️</h2>
+                <div id="location-status" class="location-status">
+                    <p id="status-text">Click "Find Courts" to discover badminton courts near you!</p>
+                </div>
+                <button class="cta-button" id="location-button" aria-label="Find badminton courts near me">
+                    📍 Find Courts Near Me
+                </button>
+                <div id="map" class="google-map"></div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2>What You'll Learn 📚</h2>
+                <ul class="features-list">
+                    <li>✅ Badminton Stance & Grip – Get the fundamentals right</li>
+                    <li>✅ Serve & Footwork – Master smooth, consistent movements</li>
+                    <li>✅ Court Positioning – Understand angles and net play</li>
+                    <li>✅ Scoring Basics – Learn how badminton scoring works</li>
+                    <li>✅ Practice Tips – Get personalized advice from your AI coach</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <section id="chat" class="card chat-section">
+            <div class="container">
+                <h2>Chat with Your Badminton Coach 💬</h2>
+
+                <!-- n8n Chat will render here -->
+                <div id="n8n-chat"></div>
+            </div>
+        </section>
+
+        <!-- CTA Footer Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Smash? Start Learning Today! 🏸</h2>
+                <p>Join thousands of young badminton players learning with Dynamite Sports Learner.</p>
+                <button class="cta-button cta-button-large" id="footer-cta-button">
+                    Chat with Your Coach Now
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Dynamite Sports Learner – Badminton Module. Learn. Practice. Excel. 🏸</p>
+            <ul class="footer-links">
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Google Maps API with callback -->
+    <script>
+        window.googleMapsCallback = function() {
+            console.log('✓ Google Maps API callback triggered');
+        };
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsgenFagJoc43uJapA6sKhLsI8DWiam8o&libraries=places&callback=googleMapsCallback" async defer></script>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+
+    <!-- n8n Chat embed -->
+    <script type="module">
+        import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+        window.addEventListener("DOMContentLoaded", () => {
+            createChat({
+                webhookUrl: "https://n8ngc.codeblazar.org/webhook/15dd843d-847b-4adc-8df7-960497974197/chat",
+                target: "#n8n-chat",
+                mode: "window",
+                initialMessages: [
+                    "Welcome. I am your AI Badminton Coach.",
+                    "I provide guidance aligned with your learning missions."
+                ],
+                i18n: {
+                    en: {
+                        title: "AI Badminton Coach",
+                        subtitle: "Supporting your learning missions",
+                        inputPlaceholder: "Ask a question related to your current mission..."
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
